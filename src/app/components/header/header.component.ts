@@ -11,7 +11,9 @@ export class HeaderComponent implements OnInit {
   constructor(private datosPortfolio:PortfolioService) { }
    /*Acceder al servicio */
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos();
+    this.datosPortfolio.obtenerDatos().subscribe(data =>{
+      console.log(data)
+    });
   }
 
 }
