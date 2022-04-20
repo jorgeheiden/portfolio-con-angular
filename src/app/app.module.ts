@@ -7,12 +7,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 /*Importar el modulo httpClient */
 import { HttpClientModule } from '@angular/common/http';
+import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    AcercaDeComponent
   ],
   imports: [
     BrowserModule,

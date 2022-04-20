@@ -5,11 +5,14 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PortfolioService {
-
+  /*Se crea un objeto llamado http, se Inyecta el modulo http Client (private http:HttpClient) */
   constructor(private http:HttpClient) { }
-  obtenerDatos():Observable<any>{
+  
+  /*Se crea una funcion obtener datos
+    Se define la funcion como Observable*/
+  obtenerDatos(): Observable<any> {
     /*se llama al metodo get.
-    Entre parentesis deberia ir un url con el request */
-    return this.http.get('./assets/data/data.json')
+    Entre parentesis deberia ir un url de la API con el request */
+    return this.http.get('https://catfact.ninja/fact');
   }
 }
