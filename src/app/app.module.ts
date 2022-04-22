@@ -8,13 +8,15 @@ import { HomeComponent } from './components/home/home.component';
 /*Importar el modulo httpClient */
 import { HttpClientModule } from '@angular/common/http';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
+import { SkilsComponent } from './components/skils/skils.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    AcercaDeComponent
+    AcercaDeComponent,
+    SkilsComponent
   ],
   imports: [
     BrowserModule,
