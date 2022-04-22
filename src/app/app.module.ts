@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { SkilsComponent } from './components/skils/skils.component';
+import { ProyectosComponent } from './components/proyectos/proyectos.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SkilsComponent } from './components/skils/skils.component';
     HeaderComponent,
     HomeComponent,
     AcercaDeComponent,
-    SkilsComponent
+    SkilsComponent,
+    ProyectosComponent
   ],
   imports: [
     BrowserModule,
