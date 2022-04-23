@@ -1,9 +1,15 @@
-.container-fluid{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.redondeado{
+    border-radius: 50%;
+    border: 5px solid rgb(18, 26, 95);
+    height: 30%;
+    width: 50%;
+    margin-bottom: 43%;
 }
-.home{
-    margin-bottom: 150px;
+.margen{
+    margin-bottom: 15%;
+}
+.fuente{
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
 }
