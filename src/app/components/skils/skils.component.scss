@@ -1,5 +1,7 @@
 .list-item-skils{
     list-style-type: none;
+    font-family: 'Space Mono', monospace;
+    
 }
 .fondo{
     background: white;
@@ -12,4 +14,18 @@
     font-family: 'Space Mono', monospace;
     font-weight: 700;
     font-size: 10vh;
+    text-decoration: underline;
+}
+.icono-skills{
+    height: 15vh;
+}
+.background{
+    background-color: #0C24F1;
+    color: white;
+}
+.fondo-texto{
+    background-color: #060f61;
+}
+.columna-skils{
+    background-color: #F2F3F4;
 }
