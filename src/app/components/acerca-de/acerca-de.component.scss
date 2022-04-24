@@ -1,3 +1,25 @@
-.container-fluid{
-    height: 100%;
+.introduccion{
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 5vh;
 }
+.btn-descarga-cv{
+    margin-top: 10vh;
+}
+
+.formacion-margen{
+    margin-left: 10vh;
+}
+.formacion h1{
+    text-decoration: underline;
+    margin-bottom: 40px;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+}
+.formacion h2{
+    font-family: 'Space Mono', monospace;;
+}
+.formacion li{
+    font-family: 'roboto mono';
+}
+
