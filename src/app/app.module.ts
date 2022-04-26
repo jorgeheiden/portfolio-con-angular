@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { SkilsComponent } from './components/skils/skils.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
     HomeComponent,
     AcercaDeComponent,
     SkilsComponent,
-    ProyectosComponent
+    ProyectosComponent,
+    IniciarSesionComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
