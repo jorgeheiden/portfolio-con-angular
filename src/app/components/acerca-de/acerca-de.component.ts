@@ -9,6 +9,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 export class AcercaDeComponent implements OnInit {
   /*1)Crear una variable: miPortfolio:any; */
   miPortfolio:any;
+  educacionList:any;
   constructor(private datoPorfolio:PortfolioService) { }
 
   ngOnInit(): void {
@@ -16,6 +17,7 @@ export class AcercaDeComponent implements OnInit {
       console.log(data)
       /*2)Asignar a la variable los valores obtenidos desde el json: this.miPortfolio=data;*/
       this.miPortfolio=data;
+      this.educacionList=data.formacion_desarrollador;
     })
   }
 

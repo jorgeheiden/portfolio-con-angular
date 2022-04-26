@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div id="acercade" class="container-fluid">
   <div class="acercade row">
     <section class="introduccion-fondo vh-100 col-sm d-flex flex-column justify-content-center">
       
@@ -17,14 +17,19 @@
     >
       <h1 class="formacion-margen">Formacion</h1>
       <h2 class="formacion-margen">Como Desarrolador:</h2>
+      <!--
+        <ul class="formacion-margen">
+          <li>Introduccion a la Programacion, Argentina Programa</li>
+          <li>Front Web Developer, Udemy</li>
+          <li>Full Stack Developer Junior, Argentina Programa</li>
+        </ul>
+      -->
       <ul class="formacion-margen">
-        <li>Introduccion a la Programacion, Argentina Programa</li>
-        <li>Front Web Developer, Udemy</li>
-        <li>Full Stack Developer Junior, Argentina Programa</li>
+        <li *ngFor="let educacion of educacionList" >{{educacion.titulo}}, {{educacion.institucion}}</li>
       </ul>
       <h2 class="formacion-margen">Educacion:</h2>
       <ul class="formacion-margen">
-        <li>Abogado, universidad Nacional De Lomas De Zamora</li>
+        <li>Abogado, Universidad Nacional De Lomas De Zamora</li>
         <li>
           Tecnico Electromecanico, Secundario Intituto Tecnico San Cayetano
         </li>

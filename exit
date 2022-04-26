@@ -1,0 +1,90 @@
+[33mcommit e561460b2d2a07746cda95a5db582d3b1d220374[m[33m ([m[1;36mHEAD -> [m[1;32mconectando-servicio-formacion[m[33m, [m[1;31morigin/conectando-servicio-formacion[m[33m)[m
+Author: Jorge Heidenreich <88209188+jorgeheiden@users.noreply.github.com>
+Date:   Mon Apr 25 20:53:14 2022 -0300
+
+    2
+
+[33mcommit 5065e87410f1890e124c3c6d84da4f8cbf3004a3[m[33m ([m[1;31morigin/estetica[m[33m, [m[1;32mestetica[m[33m)[m
+Author: Jorge Heidenreich <88209188+jorgeheiden@users.noreply.github.com>
+Date:   Sun Apr 24 23:43:51 2022 -0300
+
+    2
+
+[33mcommit 59bf0d23074a41151b5ae0d77077fd850ab160e0[m
+Author: Jorge Heidenreich <88209188+jorgeheiden@users.noreply.github.com>
+Date:   Sun Apr 24 16:03:14 2022 -0300
+
+    2
+
+[33mcommit dd73f711b5cc9663b5b5570c5f80511220e3f0ed[m
+Author: Jorge Heidenreich <88209188+jorgeheiden@users.noreply.github.com>
+Date:   Sun Apr 24 13:47:43 2022 -0300
+
+    1
+
+[33mcommit 3d3c1723b6de53b0567c8e868c3cdfefa0836bac[m[33m ([m[1;31morigin/skils[m[33m, [m[1;32mskils[m[33m)[m
+Author: Jorge Heidenreich <88209188+jorgeheiden@users.noreply.github.com>
+Date:   Sat Apr 23 20:01:48 2022 -0300
+
+    Estilos de la home finalizados
+
+[33mcommit 479d60dd68430b574f82d92746919eb028fdc804[m
+Author: Jorge Heidenreich <88209188+jorgeheiden@users.noreply.github.com>
+Date:   Fri Apr 22 12:48:53 2022 -0300
+
+    seccion proyectos agragada
+
+[33mcommit 8be206ed3f7246e3a94ef702df1dd7eb369a5d06[m
+Author: Jorge Heidenreich <88209188+jorgeheiden@users.noreply.github.com>
+Date:   Fri Apr 22 01:57:06 2022 -0300
+
+    agregada la seccion skils
+
+[33mcommit 3132dcfcbf1bb00c01fe1233d7f7f4337a4ccd8a[m[33m ([m[1;31morigin/acerca-de[m[33m, [m[1;32macerca-de[m[33m)[m
+Author: Jorge Heidenreich <88209188+jorgeheiden@users.noreply.github.com>
+Date:   Wed Apr 20 20:37:50 2022 -0300
+
+    Desarrollo de la seccion Acerca De, del front 2
+
+[33mcommit 9ec645846870de08e96fe78199db266b53758dde[m
+Author: Jorge Heidenreich <88209188+jorgeheiden@users.noreply.github.com>
+Date:   Wed Apr 20 15:32:15 2022 -0300
+
+    Desarrollo de la seccion Acerca De del front
+
+[33mcommit 3dd53d37e59f213ceb1670a40537b8037108aaa8[m[33m ([m[1;31morigin/creacion-de-servicio[m[33m, [m[1;32mcreacion-de-servicio[m[33m)[m
+Author: Jorge Heidenreich <88209188+jorgeheiden@users.noreply.github.com>
+Date:   Mon Apr 18 22:43:01 2022 -0300
+
+    Se creo un servicio y se implemento http module
+    para obtener datos del servidor
+
+[33mcommit 6fc90287139e1b3cb62ea3b71880bdf1db9fe1a4[m
+Author: Jorge Heidenreich <88209188+jorgeheiden@users.noreply.github.com>
+Date:   Sun Apr 17 20:07:37 2022 -0300
+
+    1
+
+[33mcommit dba162aa38af1b774d24cb886d098dfbc0646e35[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Jorge Heidenreich <88209188+jorgeheiden@users.noreply.github.com>
+Date:   Sun Apr 17 16:32:50 2022 -0300
+
+    3
+
+[33mcommit 5af292177238fc14d8bdf602ba106a68abbcc6ec[m
+Author: Jorge Heidenreich <88209188+jorgeheiden@users.noreply.github.com>
+Date:   Sun Apr 17 15:10:00 2022 -0300
+
+    2
+
+[33mcommit 86a7ece3eed714b7c8b91ba6074fa4db9726a956[m
+Author: Jorge Heidenreich <88209188+jorgeheiden@users.noreply.github.com>
+Date:   Sun Apr 17 14:05:24 2022 -0300
+
+    portfolio
+
+[33mcommit b217d6aa29023dfb9229a8a84bded5479d3578c1[m
+Author: Jorge Heidenreich <88209188+jorgeheiden@users.noreply.github.com>
+Date:   Sun Apr 17 13:16:42 2022 -0300
+
+    initial commit

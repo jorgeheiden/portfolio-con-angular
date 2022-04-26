@@ -1,4 +1,34 @@
+
 {
     "nombre": "Jorge Heidenreich",
-    "posicion": "Developer"
+    "posicion": "Developer",
+
+    "formacion_desarrollador":[
+        {
+            "titulo": "Introduccion a la Programacion",
+            "institucion": "Argentina Programa"
+            
+        },
+        {
+            "titulo": "Front Web Developer",
+            "institucion": "Udemy"
+        },
+        {
+            "titulo": "Full Stack Developer Junior",
+            "institucion": "Argentina Programa" 
+        }
+    ],
+    "educacion_formal":[
+        {
+            "titulo": "Abogado",
+            "institucion": "Universidad Nacional De Lomas De Zamora"
+        },
+        {
+            "titulo": "Tecnico Electromecanico",
+            "institucion": "Secundario Intituto Tecnico San Cayetano"
+        }
+        
+    ]
+
+    
 }
