@@ -19,7 +19,38 @@
       <h2 class="formacion-margen">Como Desarrolador:</h2>
       <ul class="formacion-margen">
         <li *ngFor="let nombre of nombres">{{nombre.nombre}}, {{nombre.apellido}}</li>
+        <div class="d-flex justify-content-center">
+          <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#myModal">Agregar</button>
+        </div>
+
       </ul>
+          <!--MODAL-->
+      <div class="modal fade " id="myModal">
+        <div class="modal-dialog modal-fullscreen-sm-down">
+          <div class="modal-content">
+      
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title text-black">Modal Heading</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+      
+            <!-- Modal body -->
+            <div class="modal-body d-flex flex-column">
+              <h5 class="text-dark" >Titulo</h5>
+              <input class="w-75" type="text"/>
+              <h5 class="text-dark" >Institucion</h5>
+              <input class="w-75" type="text/">
+            </div>
+      
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Agregar</button>
+            </div>
+      
+          </div>
+        </div>
+      </div>
       <!--
         <ul class="formacion-margen">
           <li>Introduccion a la Programacion, Argentina Programa</li>
