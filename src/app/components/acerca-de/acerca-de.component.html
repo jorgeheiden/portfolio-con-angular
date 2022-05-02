@@ -3,7 +3,7 @@
     <section class="introduccion-fondo vh-100 col-sm d-flex flex-column justify-content-center">
       
         <p class="introduccion mx-4">
-          Mi nombre es {{miPortfolio.nombre}}. Soy de Buenos Aires, Argentina.
+          Mi nombre es <!--{{miPortfolio.nombre}}-->Jorge Heidenreich. Soy de Buenos Aires, Argentina.
           Entusiasta de la tecnologia y el desarrollo de software
         </p>
         <button type="button" class="btn-descarga-cv btn btn-outline-danger w-30 align-self-center ">
@@ -17,6 +17,9 @@
     >
       <h1 class="formacion-margen">Formacion</h1>
       <h2 class="formacion-margen">Como Desarrolador:</h2>
+      <ul class="formacion-margen">
+        <li *ngFor="let nombre of nombres">{{nombre.nombre}}, {{nombre.apellido}}</li>
+      </ul>
       <!--
         <ul class="formacion-margen">
           <li>Introduccion a la Programacion, Argentina Programa</li>
@@ -24,9 +27,12 @@
           <li>Full Stack Developer Junior, Argentina Programa</li>
         </ul>
       -->
-      <ul class="formacion-margen">
-        <li *ngFor="let educacion of educacionList" >{{educacion.titulo}}, {{educacion.institucion}}</li>
-      </ul>
+      <!--
+        <ul class="formacion-margen">
+          <li *ngFor="let educacion of educacionList" >{{educacion.titulo}}, {{educacion.institucion}}</li>
+        </ul>
+      -->
+
       <h2 class="formacion-margen">Educacion:</h2>
       <ul class="formacion-margen">
         <li>Abogado, Universidad Nacional De Lomas De Zamora</li>
