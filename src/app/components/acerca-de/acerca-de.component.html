@@ -47,7 +47,7 @@
       
             <!-- Modal footer -->
             <div class="modal-footer">
-              <button (click)="agregar(nombre.value, apellido.value)" type="button" class="btn btn-danger" data-bs-dismiss="modal">Agregar</button>
+              <button (click)="agregar(nombre.value, apellido.value); nombre.value= ''; apellido.value=''" type="button" class="btn btn-danger" data-bs-dismiss="modal">Agregar</button>
             </div>
       
           </div>

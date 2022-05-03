@@ -3,8 +3,10 @@
     border-radius: 50%;
     border: 5px solid rgb(18, 26, 95);
     height: 30%;
-    width: 50%;
-    margin-bottom: 43%;
+    width: 58%;
+    background-color: rgb(18, 26, 95);
+    margin-bottom: 54%;
+    
 }
 .margen{
     margin-bottom: 15%;
@@ -12,4 +14,18 @@
 .fuente{
     font-family: 'Space Mono', monospace;
     font-weight: 700;
+}
+@media only screen and (max-width: 564px){
+    
+    .ocultar{
+        display: none;
+        
+    }
+    .vh{
+        height: 70vh!important;
+    }
+    .margen{
+        margin-bottom: 200px;
+    }
+    
 }
