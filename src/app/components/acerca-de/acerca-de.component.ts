@@ -31,5 +31,20 @@ export class AcercaDeComponent implements OnInit {
       this.nombres = data;
     })
   }
+      /*METODO POST*/
+  agregar(nombre:string, apellido:string){
+      this.datoPorfolio.agregarNombre({nombre, apellido}).subscribe(data=>{
+        console.log(nombre)
+        this.ngOnInit()
+      })
+  }
+      /*METODO DELETE*/
+  eliminar(nombre_id:any){
+    console.log(nombre_id)
+    this.datoPorfolio.eliminarNombre(nombre_id).subscribe((resultado:any) =>{
+      
+      this.ngOnInit()
+    } )
+  }
 
 }

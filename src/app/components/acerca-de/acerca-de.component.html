@@ -18,9 +18,11 @@
       <h1 class="formacion-margen">Formacion</h1>
       <h2 class="formacion-margen">Como Desarrolador:</h2>
       <ul class="formacion-margen">
-        <li *ngFor="let nombre of nombres">{{nombre.nombre}}, {{nombre.apellido}}</li>
-        <div class="d-flex justify-content-center">
-          <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#myModal">Agregar</button>
+        <li class="d-flex align-content-center" *ngFor="let nombre of nombres">-{{nombre.nombre}}, {{nombre.apellido}}
+          <button class="boton-eliminar ms-4" (click)="eliminar(nombre.id)"></button>
+        </li>
+        <div class="d-flex justify-content-end">
+          <button type="button" class="btn btn-outline-dark mt-4 me-5" data-bs-toggle="modal" data-bs-target="#myModal">Agregar</button>
         </div>
 
       </ul>
@@ -31,21 +33,21 @@
       
             <!-- Modal Header -->
             <div class="modal-header">
-              <h4 class="modal-title text-black">Modal Heading</h4>
+              <h4 class="modal-title text-black">Formacion</h4>
               <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
       
             <!-- Modal body -->
             <div class="modal-body d-flex flex-column">
               <h5 class="text-dark" >Titulo</h5>
-              <input class="w-75" type="text"/>
-              <h5 class="text-dark" >Institucion</h5>
-              <input class="w-75" type="text/">
+              <input class="w-75" type="text" #nombre/>
+              <h5 class="text-dark">Institucion</h5>
+              <input class="w-75" type="text" #apellido/>
             </div>
       
             <!-- Modal footer -->
             <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Agregar</button>
+              <button (click)="agregar(nombre.value, apellido.value)" type="button" class="btn btn-danger" data-bs-dismiss="modal">Agregar</button>
             </div>
       
           </div>

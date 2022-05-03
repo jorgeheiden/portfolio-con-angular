@@ -24,4 +24,15 @@ export class PortfolioService {
     obtenerDatos(): Observable<any>{
       return this.http.get<any>('https://api-con-springboot.herokuapp.com/ver/personas')
     }
+
+    /*METODO POST*/
+    agregarNombre(dato:any): Observable<any>{
+      return this.http.post<any>('https://api-con-springboot.herokuapp.com/new/persona', dato)
+      
+    }
+    /*METODO DELETE*/
+    eliminarNombre(id:any):Observable<any>{
+      return this.http.delete(`${'https://api-con-springboot.herokuapp.com/delete'}/${id}`)
+    }
+
 }
