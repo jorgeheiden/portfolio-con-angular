@@ -1,5 +1,7 @@
 .img{
     height: 27vh;
+    border-radius: 5%;
+    border: 3px solid black;
 }
 li{
     list-style-type: none;
@@ -11,5 +13,8 @@ li{
 }
 .texto{
     font-family: 'roboto mono';
+}
+.background-proyectos{
+    background-image: url(../../../assets/proyectos/background-proyectos.jpg);
 }
     

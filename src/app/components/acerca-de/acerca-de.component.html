@@ -17,8 +17,8 @@
     >
       <h1 class="formacion-margen">Formacion</h1>
       <h2 class="formacion-margen">Como Desarrolador:</h2>
-      <ul class="formacion-margen">
-        <li class="d-flex align-content-center" *ngFor="let nombre of nombres">-{{nombre.nombre}}, {{nombre.apellido}}
+      <ul class="">
+        <li class="margen-li1 d-flex align-content-center" *ngFor="let nombre of nombres"># {{nombre.nombre}}, {{nombre.apellido}}
           <button class="boton-eliminar ms-4" (click)="eliminar(nombre.id)"></button>
         </li>
         <div class="d-flex justify-content-end">
