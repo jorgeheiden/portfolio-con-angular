@@ -13,7 +13,7 @@ export class AcercaDeComponent implements OnInit {
 
   constructor(private datoPorfolio:PortfolioService) { }
 
-  nombres:any;
+  titulos:any;
 
   ngOnInit(): void {
 
@@ -28,20 +28,20 @@ export class AcercaDeComponent implements OnInit {
         /*METODO GET*/
     this.datoPorfolio.obtenerDatos().subscribe(data =>{
       console.log(data)
-      this.nombres = data;
+      this.titulos = data;
     })
   }
       /*METODO POST*/
-  agregar(nombre:string, apellido:string){
-      this.datoPorfolio.agregarNombre({nombre, apellido}).subscribe(data=>{
-        console.log(nombre)
+  agregar(titulo:string, institucion:string){
+      this.datoPorfolio.agregarTitulo({titulo, institucion}).subscribe(data=>{
+        console.log(titulo)
         this.ngOnInit()
       })
   }
       /*METODO DELETE*/
-  eliminar(nombre_id:any){
-    console.log(nombre_id)
-    this.datoPorfolio.eliminarNombre(nombre_id).subscribe((resultado:any) =>{
+  eliminar(titulo_id:any){
+    console.log(titulo_id)
+    this.datoPorfolio.eliminarTitulo(titulo_id).subscribe((resultado:any) =>{
       
       this.ngOnInit()
     } )

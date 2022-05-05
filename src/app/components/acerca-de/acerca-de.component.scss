@@ -9,7 +9,8 @@
 }
 
 .formacion-margen{
-    margin-left: 10vh
+    margin-left: 4vw;
+    list-style: none;
 }
 .margen-li1{
     margin-left: 6vh;
@@ -41,9 +42,21 @@
 .boton-eliminar{
     background-image: url(../../../assets/icono-eliminar/delete_40623.ico);
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    height: 3.5vh;
-    width: 3.5vh;
+    height: 3.9vh;
+    width: 68%;
     border-radius: 50%;
     
+}
+@media only screen and (max-width: 564px){
+    .formacion-margen{
+        margin-left: 0;
+    }
+    .margen-li1{
+        margin-left: 0;
+    }
+}
+.lista-educacion-margen{
+    margin-left: 3vw;
 }

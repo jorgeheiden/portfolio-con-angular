@@ -18,8 +18,11 @@
       <h1 class="formacion-margen">Formacion</h1>
       <h2 class="formacion-margen">Como Desarrolador:</h2>
       <ul class="">
-        <li class="margen-li1 d-flex align-content-center" *ngFor="let nombre of nombres"># {{nombre.nombre}}, {{nombre.apellido}}
-          <button class="boton-eliminar ms-4" (click)="eliminar(nombre.id)"></button>
+        <li class="margen-li1 d-flex align-content-center" *ngFor="let titulo of titulos"># {{titulo.titulo}}, {{titulo.institucion}}
+          <div>
+            <button class="boton-eliminar ms-4" (click)="eliminar(titulo.id)"></button>
+          </div>
+
         </li>
         <div class="d-flex justify-content-end">
           <button type="button" class="btn btn-outline-dark mt-4 me-5" data-bs-toggle="modal" data-bs-target="#myModal">Agregar</button>
@@ -40,14 +43,14 @@
             <!-- Modal body -->
             <div class="modal-body d-flex flex-column">
               <h5 class="text-dark" >Titulo</h5>
-              <input class="w-75" type="text" #nombre/>
+              <input class="w-75" type="text" #titulo/>
               <h5 class="text-dark">Institucion</h5>
-              <input class="w-75" type="text" #apellido/>
+              <input class="w-75" type="text" #institucion/>
             </div>
       
             <!-- Modal footer -->
             <div class="modal-footer">
-              <button (click)="agregar(nombre.value, apellido.value); nombre.value= ''; apellido.value=''" type="button" class="btn btn-danger" data-bs-dismiss="modal">Agregar</button>
+              <button (click)="agregar(titulo.value, institucion.value); titulo.value= ''; institucion.value=''" type="button" class="btn btn-danger" data-bs-dismiss="modal">Agregar</button>
             </div>
       
           </div>
@@ -67,10 +70,10 @@
       -->
 
       <h2 class="formacion-margen">Educacion:</h2>
-      <ul class="formacion-margen">
-        <li>Abogado, Universidad Nacional De Lomas De Zamora</li>
+      <ul class="formacion-margen lista-educacion-margen">
+        <li># Abogado, Universidad Nacional De Lomas De Zamora</li>
         <li>
-          Tecnico Electromecanico, Secundario Intituto Tecnico San Cayetano
+          # Tecnico Electromecanico, Secundario Intituto Tecnico San Cayetano
         </li>
       </ul>
     </section>
