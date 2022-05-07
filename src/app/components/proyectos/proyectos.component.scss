@@ -10,6 +10,8 @@ li{
     text-decoration: underline;
     font-family: 'Space Mono', monospace;
     font-weight: 700;
+    margin-left: 23%;
+    
 }
 .texto{
     font-family: 'roboto mono';
@@ -17,4 +19,33 @@ li{
 .background-proyectos{
     background-image: url(../../../assets/proyectos/background-proyectos.jpg);
 }
-    
+.btn-eliminar{
+    background-image: url(../../../assets/iconos-proyecto/eliminar.svg);
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 2.2rem;
+    width: 2.2rem;
+    border: none;
+    box-shadow: 0 0 10px;
+}
+.btn-eliminar:active{
+ transform: scale(0.9);
+}
+.btn-upload{
+    margin-left: 20%;
+    background-image: url(../../../assets/iconos-proyecto/upload-3d.svg);
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    height: 3rem;
+    width: 3rem;
+    box-shadow: 0 0 10px ;
+    margin-top: 1.6%;
+}
+.btn-upload:active{
+    transform: scale(0.9)
+}

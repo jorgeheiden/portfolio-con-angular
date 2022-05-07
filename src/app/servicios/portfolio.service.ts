@@ -35,4 +35,15 @@ export class PortfolioService {
       return this.http.delete(`${'https://api-con-springboot.herokuapp.com/delete'}/${id}`)
     }
 
+    /*Funcion llamada en PROYECTOS*/
+    obtenerImagenes():Observable<any>{
+      return this.http.get('./assets/data/data.json')
+    }
+
+    /*****************Metodo Post Proyectos **********************/
+
+    enviarI(d:any): Observable<any>{
+      console.log(d)
+      return this.http.post<any>('https://proyectos01.herokuapp.com/new/persona', d)
+    }
 }
