@@ -2,7 +2,7 @@
   <div class="row vh-100">
     <div class="col-sm d-flex justify-content-center align-content-center flex-wrap">
       <h1 class="titulo text-center mt-3">Proyectos</h1>
-      <button class="btn-upload"></button>
+      <button type="button" class="btn-upload" data-bs-toggle="modal" data-bs-target="#modalProyectos"></button>
     </div>
 
     <div class="col-sm-12 d-flex justify-content-center align-content-center">
@@ -54,15 +54,37 @@
       </div>
 
     -->
-    
-    <div class="d-flex flex-column w-50">
-      <!--Input para subir las imagenes-->
-      <!-- accept="" se definen que tipo de imagenes son permitidas -->
-      <input class="mb-3" type="file" accept="png, jpg, jpeg" (change)="cargarImagen($event)">
-      <h4>Nombre del Proyecto:</h4>
-      <input class="mb-3" type="text" #nombreProyecto/>
-      <button class="mb-3" (click)="enviar(imagenes, nombreProyecto.value); nombreProyecto.value= ''">Enviar</button>
-    </div>
   
   </div>
+                    <!--***************MODAL*******************-->
+
+
+<!-- The Modal -->
+<div class="modal modal fade" id="modalProyectos">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Subir un Proyecto</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <h5>Agregar una Imagen:</h5>
+        <input class="mb-3" type="file" accept="png, jpg, jpeg" (change)="cargarImagen($event)">
+        <h5>Nombre del Proyecto:</h5>
+        <input class="mb-3 w-50" type="text" #nombreProyecto/>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" (click)="enviar(imagenes, nombreProyecto.value); nombreProyecto.value= ''" data-bs-dismiss="modal">Enviar</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 </div>

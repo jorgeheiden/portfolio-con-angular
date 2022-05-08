@@ -40,14 +40,19 @@
 
 }
 .boton-eliminar{
-    background-image: url(../../../assets/icono-eliminar/delete_40623.ico);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 3.9vh;
-    width: 68%;
+    background-image: url(../../../assets/iconos-proyecto/eliminar.svg);
     border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    height: 1.5rem;
+    width: 1.5rem;
+    box-shadow: 0 0 10px ;
     
+}
+.boton-eliminar:active{
+    transform: scale(0.9);
 }
 @media only screen and (max-width: 564px){
     .formacion-margen{
@@ -59,4 +64,22 @@
 }
 .lista-educacion-margen{
     margin-left: 3vw;
+}
+.btn-formacion{
+    background-image: url(../../../assets/iconos-proyecto/upload-3d.svg);
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    height: 3rem;
+    width: 3rem;
+    box-shadow: 0 0 10px ;
+}
+.btn-formacion:active{
+    transform: scale(0.9);
+}
+li{
+    font-size: 1.05rem;
+    margin-top: 0.4rem;
 }

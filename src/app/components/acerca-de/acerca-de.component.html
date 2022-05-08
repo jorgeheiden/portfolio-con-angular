@@ -14,8 +14,15 @@
 
     <section
       class="formacion vh-100 col-sm d-flex flex-column justify-content-center"
-    >
-      <h1 class="formacion-margen">Formacion</h1>
+    > <div class="row d-flex">
+        <div class="col-sm">
+          <h1 class="formacion-margen">Formacion</h1>
+        </div>
+        <div class="col-sm d-flex justify-content-center">
+          <button type="button" class="btn-formacion" data-bs-toggle="modal" data-bs-target="#myModal"></button>
+        </div>
+
+    </div>
       <h2 class="formacion-margen">Como Desarrolador:</h2>
       <ul class="">
         <li class="margen-li1 d-flex align-content-center" *ngFor="let titulo of titulos"># {{titulo.titulo}}, {{titulo.institucion}}
@@ -24,9 +31,7 @@
           </div>
 
         </li>
-        <div class="d-flex justify-content-end">
-          <button type="button" class="btn btn-outline-dark mt-4 me-5" data-bs-toggle="modal" data-bs-target="#myModal">Agregar</button>
-        </div>
+        
 
       </ul>
           <!--MODAL-->
@@ -42,9 +47,9 @@
       
             <!-- Modal body -->
             <div class="modal-body d-flex flex-column">
-              <h5 class="text-dark" >Titulo</h5>
+              <h5 class="text-dark" >Titulo:</h5>
               <input class="w-75" type="text" #titulo/>
-              <h5 class="text-dark">Institucion</h5>
+              <h5 class="text-dark">Institucion:</h5>
               <input class="w-75" type="text" #institucion/>
             </div>
       
@@ -69,10 +74,10 @@
         </ul>
       -->
 
-      <h2 class="formacion-margen">Educacion:</h2>
+      <h2 class="formacion-margen mt-4">Educacion:</h2>
       <ul class="formacion-margen lista-educacion-margen">
         <li># Abogado, Universidad Nacional De Lomas De Zamora</li>
-        <li>
+        <li class="mt-2">
           # Tecnico Electromecanico, Secundario Intituto Tecnico San Cayetano
         </li>
       </ul>
