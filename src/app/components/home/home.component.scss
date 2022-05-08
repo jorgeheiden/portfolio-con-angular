@@ -14,7 +14,21 @@
 .fuente{
     font-family: 'Space Mono', monospace;
     font-weight: 700;
+
+    
 }
+/*.efecto{
+    white-space: nowrap; 
+    width: 0;
+    overflow: hidden;
+    animation: typing 1s steps(25, end) forwards;
+    animation-delay: 2s;
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }*/
+
 @media only screen and (max-width: 564px){
     
     .ocultar{
@@ -31,4 +45,6 @@
         text-align: center;
         font-size: 4vh;
     }
+    
+    
 }

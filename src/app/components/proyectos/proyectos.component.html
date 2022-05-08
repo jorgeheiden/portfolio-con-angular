@@ -7,13 +7,17 @@
 
     <div class="col-sm-12 d-flex justify-content-center align-content-center">
       <ul class="d-flex flex-wrap justify-content-center">
-        <li class="mx-5 d-flex flex flex-column" *ngFor="let dato of datos">
-          <img class="img" [src]="dato.titulo" alt="">
-          <p class="text-center texto">{{dato.institucion}}</p>
+        <li class="mx-5 mt-2 d-flex flex flex-column" *ngFor="let dato of datos">
+          
+          <a [href]="dato.link" target="_blank" class="img-size">
+            <img class="img" [src]="dato.imagen" alt="">
+          </a>
+          <p class="text-center texto">{{dato.proyecto}}</p>
           <button class="btn-eliminar" (click)="eliminar(dato.id)"></button>
         </li>
       </ul>
     </div>
+
     
     <!--
       <div class="col-sm-12">
@@ -76,11 +80,13 @@
         <input class="mb-3" type="file" accept="png, jpg, jpeg" (change)="cargarImagen($event)">
         <h5>Nombre del Proyecto:</h5>
         <input class="mb-3 w-50" type="text" #nombreProyecto/>
+        <h5>Link del Proyecto</h5>
+        <input class="mb-3 w-50" type="text" #linkProyecto>
       </div>
 
       <!-- Modal footer -->
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" (click)="enviar(imagenes, nombreProyecto.value); nombreProyecto.value= ''" data-bs-dismiss="modal">Enviar</button>
+        <button type="button" class="btn btn-danger" (click)="enviar(imagenes, nombreProyecto.value, linkProyecto.value); nombreProyecto.value= ''; linkProyecto.value='' " data-bs-dismiss="modal">Enviar</button>
       </div>
 
     </div>

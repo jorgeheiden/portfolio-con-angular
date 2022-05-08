@@ -2,9 +2,20 @@
     height: 27vh;
     border-radius: 5%;
     border: 3px solid black;
+    width: 15rem;
+}
+
+.img:active{
+    transform: scale(0.9);
+}
+.img:hover{
+   opacity: 0.3;
+    
 }
 li{
     list-style-type: none;
+    
+    
 }
 .titulo{
     text-decoration: underline;
@@ -15,6 +26,11 @@ li{
 }
 .texto{
     font-family: 'roboto mono';
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    
+
 }
 .background-proyectos{
     background-image: url(../../../assets/proyectos/background-proyectos.jpg);
