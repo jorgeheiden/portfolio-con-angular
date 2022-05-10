@@ -10,6 +10,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { SkilsComponent } from './components/skils/skils.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { LoginComponent } from './components/login/login.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,13 +21,16 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
     HomeComponent,
     AcercaDeComponent,
     SkilsComponent,
-    ProyectosComponent
+    ProyectosComponent,
+    LoginComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     /*2) Especificar el modulo importado: */
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
