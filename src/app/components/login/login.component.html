@@ -7,7 +7,7 @@
       -->
       <input  type="email" formControlName="email" 
       [ngClass]="{'is-invalid':Email?.errors && Email?.touched, 'is-valid': !Email?.errors && Email?.touched}"
-      class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="usuario.email">
       
       
       <!--Alertas-->
@@ -25,7 +25,7 @@
       <!--ngClass: Hace que el input se ponga rojo o verde segun haya o no error-->
       <input type="password" formControlName="password" 
       [ngClass]="{'is-invalid':Password?.errors && Password?.touched, 'is-valid': !Password?.errors && Password?.touched}"
-      class="form-control" id="exampleInputPassword1">
+      class="form-control" id="exampleInputPassword1" [(ngModel)]="usuario.password">
       <!--Alertas-->
       <div *ngIf="Password?.errors && Password?.touched">
         <p *ngIf="Password?.hasError('required')" class="text-danger">
@@ -36,7 +36,7 @@
         </p>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary">Enviar</button>
+    <button type="submit" class="btn btn-primary" (click)="ingresar()">Enviar</button>
   </form>
 
   
