@@ -5,7 +5,7 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { canActivate, redirectUnauthorizedTo} from '@angular/fire/auth-guard';
 
 const routes: Routes = [
-  {path: 'portfolio', component:PortfolioComponent},
+  {path: 'portfolio', component:PortfolioComponent, ...canActivate(() => redirectUnauthorizedTo(['login']))},
   {path: 'login', component:LoginComponent},
   {path: '', redirectTo: 'login', pathMatch: 'full'},
   

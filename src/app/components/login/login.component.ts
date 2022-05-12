@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 //Importar
 import { Router } from '@angular/router';
@@ -15,7 +16,12 @@ export class LoginComponent implements OnInit {
    //Crear un formulario que se enlazara con el template
   form:FormGroup;
   //Incyectar el servicio router
-  constructor(private formBuilder:FormBuilder, private logservice:LoginService, private router:Router) { 
+  constructor(
+     private formBuilder:FormBuilder,
+     private logservice:LoginService, 
+     private router:Router, 
+     
+     ) { 
     //Inicializar el formulario
     this.form= this.formBuilder.group({
       //especificar el grupo de forms control
@@ -34,8 +40,10 @@ export class LoginComponent implements OnInit {
     const {email,password}= this.usuario
     this.logservice.login(email, password).then( res=>{
       console.log("se logeo: ",res)
+    this.router.navigate(['portfolio'])
       
     })
+    .catch(error => console.log(error))
   }
 
 

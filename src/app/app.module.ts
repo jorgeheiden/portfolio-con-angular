@@ -15,6 +15,11 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
+import { AngularFireAuthModule} from '@angular/fire/compat/auth'
+import { provideFirebaseApp } from '@angular/fire/app';
+import { initializeApp } from 'firebase/app';
+import { provideAuth } from '@angular/fire/auth';
+import { getAuth } from '@firebase/auth';
 
 @NgModule({
   declarations: [
@@ -34,7 +39,11 @@ import { environment } from 'src/environments/environment';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+    provideAuth(() => getAuth())
+    //AngularFireModule.initializeApp(environment.firebaseConfig),
+    //AngularFireAuthModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
