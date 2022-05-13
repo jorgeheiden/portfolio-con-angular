@@ -1,8 +1,8 @@
 <div id="proyectos" class="container-fluid background-proyectos">
   <div class="row vh-100">
-    <div class="col-sm d-flex justify-content-center align-content-center flex-wrap">
+    <div class="col-sm text-center">
       <h1 class="titulo text-center mt-3">Proyectos</h1>
-      <button type="button" class="btn-upload" data-bs-toggle="modal" data-bs-target="#modalProyectos"></button>
+      
     </div>
 
     <div class="col-sm-12 d-flex justify-content-center align-content-center">
@@ -13,7 +13,7 @@
             <img class="img" [src]="dato.imagen" alt="">
           </a>
           <p class="text-center texto">{{dato.proyecto}}</p>
-          <button class="btn-eliminar" (click)="eliminar(dato.id)"></button>
+          
         </li>
       </ul>
     </div>

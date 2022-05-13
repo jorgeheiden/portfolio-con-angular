@@ -1,42 +1,47 @@
-<h1 class="m-5">Iniciar Sesion</h1>
-<form [formGroup]="form" class="m-5">
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Email</label>
-      <!--ngClass: Hace que el input se ponga rojo o verde segun haya o no error
-      -is-invalid - is-valid: Son propiedades de Bootstrap
-      -->
-      <input  type="email" formControlName="email" 
-      [ngClass]="{'is-invalid':Email?.errors && Email?.touched, 'is-valid': !Email?.errors && Email?.touched}"
-      class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="usuario.email">
-      
-      
-      <!--Alertas-->
-      <div *ngIf="Email?.errors && Email?.touched">
-        <p *ngIf="Email?.hasError('required')" class="text-danger">
-          El email es requerido
-        </p>
-        <p *ngIf="Email?.hasError('email')" class="text-danger">
-          El formato del email debe ser valido
-        </p>
+<div class="login">
+  <h1 class="m-5 text-center"><u>Iniciar Sesion</u></h1>
+  <form [formGroup]="form" class="m-5 w-25 mx-auto border border-3 border-dark p-4 rounded">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email</label>
+        <!--ngClass: Hace que el input se ponga rojo o verde segun haya o no error
+        -is-invalid - is-valid: Son propiedades de Bootstrap
+        -->
+        <input  type="email" formControlName="email" 
+        [ngClass]="{'is-invalid':Email?.errors && Email?.touched, 'is-valid': !Email?.errors && Email?.touched}"
+        class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="usuario.email">
+        
+        
+        <!--Alertas-->
+        <div *ngIf="Email?.errors && Email?.touched">
+          <p *ngIf="Email?.hasError('required')" class="text-danger">
+            El email es requerido
+          </p>
+          <p *ngIf="Email?.hasError('email')" class="text-danger">
+            El formato del email debe ser valido
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-      <!--ngClass: Hace que el input se ponga rojo o verde segun haya o no error-->
-      <input type="password" formControlName="password" 
-      [ngClass]="{'is-invalid':Password?.errors && Password?.touched, 'is-valid': !Password?.errors && Password?.touched}"
-      class="form-control" id="exampleInputPassword1" [(ngModel)]="usuario.password">
-      <!--Alertas-->
-      <div *ngIf="Password?.errors && Password?.touched">
-        <p *ngIf="Password?.hasError('required')" class="text-danger">
-          La contraseña es requerida
-        </p>
-        <p *ngIf="Password?.errors?.['minlength']" class="text-danger">
-          La contraseña debe ser de 8 o mas caracteres
-        </p>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+        <!--ngClass: Hace que el input se ponga rojo o verde segun haya o no error-->
+        <input type="password" formControlName="password" 
+        [ngClass]="{'is-invalid':Password?.errors && Password?.touched, 'is-valid': !Password?.errors && Password?.touched}"
+        class="form-control" id="exampleInputPassword1" [(ngModel)]="usuario.password">
+        <!--Alertas-->
+        <div *ngIf="Password?.errors && Password?.touched">
+          <p *ngIf="Password?.hasError('required')" class="text-danger">
+            La contraseña es requerida
+          </p>
+          <p *ngIf="Password?.errors?.['minlength']" class="text-danger">
+            La contraseña debe ser de 8 o mas caracteres
+          </p>
+        </div>
       </div>
-    </div>
-    <button type="submit" class="btn btn-primary" (click)="ingresar()">Enviar</button>
-  </form>
+      <div class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-dark w-100" (click)="ingresar()">Enviar</button>
+      </div>
+    </form>
+  </div>
+
 
   

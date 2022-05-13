@@ -1,0 +1,87 @@
+<div id="acercade" class="container-fluid">
+    <div class="acercade row">
+      <section class="introduccion-fondo vh-100 col-sm d-flex flex-column justify-content-center">
+        
+          <p class="introduccion mx-4">
+            Mi nombre es <!--{{miPortfolio.nombre}}-->Jorge Heidenreich. Soy de Buenos Aires, Argentina.
+            Entusiasta de la tecnologia y el desarrollo de software
+          </p>
+          <button type="button" class="btn-descarga-cv btn btn-outline-danger w-30 align-self-center ">
+            Descargar CV
+          </button>
+    
+      </section>
+  
+      <section
+        class="formacion vh-100 col-sm d-flex flex-column justify-content-center"
+      > <div class="row d-flex">
+          <div class="col-sm">
+            <h1 class="formacion-margen">Formacion</h1>
+          </div>
+          <div class="col-sm d-flex justify-content-center">
+            <button type="button" class="btn-formacion" data-bs-toggle="modal" data-bs-target="#myModal"></button>
+          </div>
+  
+      </div>
+        <h2 class="formacion-margen">Como Desarrolador:</h2>
+        <ul class="">
+          <li class="margen-li1 d-flex align-content-center" *ngFor="let titulo of titulos"># {{titulo.titulo}}, {{titulo.institucion}}
+            <div>
+              <button class="boton-eliminar ms-4" (click)="eliminar(titulo.id)"></button>
+            </div>
+  
+          </li>
+          
+  
+        </ul>
+            <!--MODAL-->
+        <div class="modal fade " id="myModal">
+          <div class="modal-dialog modal-fullscreen-sm-down">
+            <div class="modal-content">
+        
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title text-black">Formacion</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+        
+              <!-- Modal body -->
+              <div class="modal-body d-flex flex-column">
+                <h5 class="text-dark" >Titulo:</h5>
+                <input class="w-75" type="text" #titulo/>
+                <h5 class="text-dark">Institucion:</h5>
+                <input class="w-75" type="text" #institucion/>
+              </div>
+        
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button (click)="agregar(titulo.value, institucion.value); titulo.value= ''; institucion.value=''" type="button" class="btn btn-danger" data-bs-dismiss="modal">Agregar</button>
+              </div>
+        
+            </div>
+          </div>
+        </div>
+        <!--
+          <ul class="formacion-margen">
+            <li>Introduccion a la Programacion, Argentina Programa</li>
+            <li>Front Web Developer, Udemy</li>
+            <li>Full Stack Developer Junior, Argentina Programa</li>
+          </ul>
+        -->
+        <!--
+          <ul class="formacion-margen">
+            <li *ngFor="let educacion of educacionList" >{{educacion.titulo}}, {{educacion.institucion}}</li>
+          </ul>
+        -->
+  
+        <h2 class="formacion-margen mt-4">Educacion:</h2>
+        <ul class="formacion-margen lista-educacion-margen">
+          <li># Abogado, Universidad Nacional De Lomas De Zamora</li>
+          <li class="mt-2">
+            # Tecnico Electromecanico, Secundario Intituto Tecnico San Cayetano
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+  

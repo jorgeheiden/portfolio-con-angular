@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 /*1)importar el servicio */
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
-
+import { Router } from '@angular/router'
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -9,7 +9,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class HeaderComponent implements OnInit {
   /*2)Inyectar el servicio (private datosPortfolio:PortfolioService)  */
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor(private datosPortfolio:PortfolioService, private router:Router) { }
    /*Acceder al servicio */
   ngOnInit(): void {
     /*3)Acceder al servicio this.datosPortfolio.obtenerDatos() */
@@ -22,5 +22,8 @@ export class HeaderComponent implements OnInit {
     });
   }
 
+  log(){
+    this.router.navigate(['login'])
+  }
 }
 /*4)Ir a app.module.ts Importar el modulo HttpClient*/

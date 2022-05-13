@@ -1,0 +1,97 @@
+<div id="proyectos" class="container-fluid background-proyectos">
+    <div class="row vh-100">
+      <div class="col-sm d-flex justify-content-center align-content-center flex-wrap">
+        <h1 class="titulo text-center mt-3">Proyectos</h1>
+        <button type="button" class="btn-upload" data-bs-toggle="modal" data-bs-target="#modalProyectos"></button>
+      </div>
+  
+      <div class="col-sm-12 d-flex justify-content-center align-content-center">
+        <ul class="d-flex flex-wrap justify-content-center">
+          <li class="mx-5 mt-2 d-flex flex flex-column" *ngFor="let dato of datos">
+            
+            <a [href]="dato.link" target="_blank" class="img-size">
+              <img class="img" [src]="dato.imagen" alt="">
+            </a>
+            <p class="text-center texto">{{dato.proyecto}}</p>
+            <button class="btn-eliminar" (click)="eliminar(dato.id)"></button>
+          </li>
+        </ul>
+      </div>
+  
+      
+      <!--
+        <div class="col-sm-12">
+          <ul class="d-flex flex-wrap justify-content-center">
+            <li class="mx-5">
+              <img
+                class="img"
+                src="../../../assets/proyectos/pexels-life-of-pix-7974.jpg"
+                alt=""
+              />
+              <p class="text-center texto">Proyecto 1</p>
+            </li>
+            <li class="mx-5">
+              <img
+                class="img"
+                src="../../../assets/proyectos/pexels-life-of-pix-7974.jpg"
+                alt=""
+              />
+              <p class="text-center texto">Proyecto 2</p>
+            </li>
+            <li class="mx-5">
+              <img
+                class="img"
+                src="../../../assets/proyectos/pexels-life-of-pix-7974.jpg"
+                alt=""
+              />
+              <p class="text-center texto">Proyecto 3</p>
+            </li>
+            <li class="mx-5">
+              <img
+                class="img"
+                src="../../../assets/proyectos/pexels-life-of-pix-7974.jpg"
+                alt=""
+              />
+              <p class="text-center texto">Proyecto 4</p>
+            </li>
+          </ul>
+        </div>
+  
+      -->
+    
+    </div>
+                      <!--***************MODAL*******************-->
+  
+  
+  <!-- The Modal -->
+  <div class="modal modal fade" id="modalProyectos">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Subir un Proyecto</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <h5>Agregar una Imagen:</h5>
+          <input class="mb-3" type="file" accept="png, jpg, jpeg" (change)="cargarImagen($event)">
+          <h5>Nombre del Proyecto:</h5>
+          <input class="mb-3 w-50" type="text" #nombreProyecto/>
+          <h5>Link del Proyecto</h5>
+          <input class="mb-3 w-50" type="text" #linkProyecto>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" (click)="enviar(imagenes, nombreProyecto.value, linkProyecto.value); nombreProyecto.value= ''; linkProyecto.value='' " data-bs-dismiss="modal">Enviar</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  
+  </div>
+  

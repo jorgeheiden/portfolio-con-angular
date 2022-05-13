@@ -20,6 +20,9 @@ import { provideFirebaseApp } from '@angular/fire/app';
 import { initializeApp } from 'firebase/app';
 import { provideAuth } from '@angular/fire/auth';
 import { getAuth } from '@firebase/auth';
+import { PortfolioLoggedComponent } from './components/portfolio-logged/portfolio-logged.component';
+import { AcercaDeLoggedComponent } from './components/acerca-de-logged/acerca-de-logged.component';
+import { ProyectosLoggedComponent } from './components/proyectos-logged/proyectos-logged.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { getAuth } from '@firebase/auth';
     SkilsComponent,
     ProyectosComponent,
     LoginComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    PortfolioLoggedComponent,
+    AcercaDeLoggedComponent,
+    ProyectosLoggedComponent
   ],
   imports: [
     BrowserModule,

@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
     const {email,password}= this.usuario
     this.logservice.login(email, password).then( res=>{
       console.log("se logeo: ",res)
-    this.router.navigate(['portfolio'])
+    this.router.navigate(['portfolio-logged'])
       
     })
     .catch(error => console.log(error))
