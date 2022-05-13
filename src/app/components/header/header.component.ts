@@ -25,5 +25,19 @@ export class HeaderComponent implements OnInit {
   log(){
     this.router.navigate(['login'])
   }
+
+
+  /************Rutas barra de navegacion ***********************/
+  acercaDe(){
+    this.router.navigate(['acerca-de-logged'])
+  }
+
+  skills(){
+    this.router.navigate(['skills'])
+  }
+
+  proyectos(){
+    this.router.navigate(['proyectos-logged'])
+  }
 }
 /*4)Ir a app.module.ts Importar el modulo HttpClient*/
