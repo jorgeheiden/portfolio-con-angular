@@ -23,6 +23,7 @@ import { getAuth } from '@firebase/auth';
 import { PortfolioLoggedComponent } from './components/portfolio-logged/portfolio-logged.component';
 import { AcercaDeLoggedComponent } from './components/acerca-de-logged/acerca-de-logged.component';
 import { ProyectosLoggedComponent } from './components/proyectos-logged/proyectos-logged.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ProyectosLoggedComponent } from './components/proyectos-logged/proyecto
     PortfolioComponent,
     PortfolioLoggedComponent,
     AcercaDeLoggedComponent,
-    ProyectosLoggedComponent
+    ProyectosLoggedComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,

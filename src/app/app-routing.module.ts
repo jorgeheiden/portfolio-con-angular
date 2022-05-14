@@ -9,6 +9,7 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { ProyectosLoggedComponent } from './components/proyectos-logged/proyectos-logged.component';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { SkilsComponent } from './components/skils/skils.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
 
 
 const routes: Routes = [
@@ -20,7 +21,8 @@ const routes: Routes = [
   {path: 'acercade', component: AcercaDeComponent},
   {path: 'skills', component: SkilsComponent},
   {path: 'proyectos', component: ProyectosComponent},
-  {path: 'proyectos-logged', component: ProyectosLoggedComponent, ...canActivate(() => redirectUnauthorizedTo(['proyectos']) ) }
+  {path: 'proyectos-logged', component: ProyectosLoggedComponent, ...canActivate(() => redirectUnauthorizedTo(['proyectos']) ) },
+  {path: 'contacto', component: ContactoComponent}
 ];
 
 @NgModule({

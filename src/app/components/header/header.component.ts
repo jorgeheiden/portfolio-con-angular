@@ -39,5 +39,10 @@ export class HeaderComponent implements OnInit {
   proyectos(){
     this.router.navigate(['proyectos-logged'])
   }
+
+  /***********************Contacto ****************/
+  contacto(){
+    this.router.navigate(['contacto'])
+  }
 }
 /*4)Ir a app.module.ts Importar el modulo HttpClient*/
