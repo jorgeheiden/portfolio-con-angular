@@ -35,19 +35,28 @@ export class LoginComponent implements OnInit {
     password:''
   }
 
+ 
   ingresar(){
     console.log(this.usuario);
     const {email,password}= this.usuario
     this.logservice.login(email, password).then( res=>{
-      console.log("se logeo: ",res)
+      console.log("se logeo: ",res.operationType)
     this.router.navigate(['portfolio-logged'])
       
     })
     .catch(error => console.log(error))
   }
 
+  cerrarSesion(){
+    this.logservice.logout()
+    .then(() => {
+      this.router.navigate(['portfolio'])
+    })
+    .catch(error => console.log(error))
+  }
 
   ngOnInit(): void {
+    
   }
 
   // Propiedades para acceder a los formControl

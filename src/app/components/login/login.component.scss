@@ -4,3 +4,11 @@
 .fuente{
     font-size: 2rem;
 }
+.cerrarsesion{
+    text-decoration: underline;
+    color: blue;
+}
+.cerrarsesion:hover{
+    color: red;
+    cursor: pointer;
+}
