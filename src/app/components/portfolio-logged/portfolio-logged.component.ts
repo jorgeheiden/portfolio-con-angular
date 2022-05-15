@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortfolioLoggedComponent implements OnInit {
 
+  valor = "LogOut"
+
   constructor() { }
 
   ngOnInit(): void {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 /*1)importar el servicio */
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { Router } from '@angular/router'
@@ -8,6 +8,9 @@ import { Router } from '@angular/router'
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+
+  @Input() botonLogin = ""
+
   /*2)Inyectar el servicio (private datosPortfolio:PortfolioService)  */
   constructor(private datosPortfolio:PortfolioService, private router:Router) { }
    /*Acceder al servicio */
