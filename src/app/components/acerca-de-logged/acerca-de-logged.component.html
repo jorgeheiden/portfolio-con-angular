@@ -25,9 +25,9 @@
       </div>
         <h2 class="formacion-margen">Como Desarrolador:</h2>
         <ul class="">
-          <li class="margen-li1 d-flex align-content-center" *ngFor="let titulo of titulos"># {{titulo.titulo}}, {{titulo.institucion}}
+          <li class="margen-li1 d-flex align-content-center" *ngFor="let titulo of titulos"># {{titulo.tituloEdu}}, {{titulo.institucionEdu}}
             <div>
-              <button class="boton-eliminar ms-4" (click)="eliminar(titulo.id)"></button>
+              <button class="boton-eliminar ms-4" (click)="eliminar(titulo.idEdu)"></button>
             </div>
   
           </li>
@@ -48,14 +48,14 @@
               <!-- Modal body -->
               <div class="modal-body d-flex flex-column">
                 <h5 class="text-dark" >Titulo:</h5>
-                <input class="w-75" type="text" #titulo/>
+                <input class="w-75" type="text" #tituloEdu/>
                 <h5 class="text-dark">Institucion:</h5>
-                <input class="w-75" type="text" #institucion/>
+                <input class="w-75" type="text" #institucionEdu/>
               </div>
         
               <!-- Modal footer -->
               <div class="modal-footer">
-                <button (click)="agregar(titulo.value, institucion.value); titulo.value= ''; institucion.value=''" type="button" class="btn btn-danger" data-bs-dismiss="modal">Agregar</button>
+                <button (click)="agregar(tituloEdu.value, institucionEdu.value); tituloEdu.value= ''; institucionEdu.value=''" type="button" class="btn btn-danger" data-bs-dismiss="modal">Agregar</button>
               </div>
         
             </div>

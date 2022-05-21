@@ -16,16 +16,16 @@ export class StorageService {
 
   /**************METODO GET **********/
   obtenerDatos():Observable<any>{
-    return this.http.get<any>('https://proyectos01.herokuapp.com/ver/personas')
+    return this.http.get<any>('https://back-end-arg-prog-2.herokuapp.com/proyectos/ver/proyectos')
   }
   /*************METODO POST ************/
   enviarI(dato:any): Observable<any>{
-      return this.http.post<any>('https://proyectos01.herokuapp.com/new/persona',dato)
+      return this.http.post<any>('https://back-end-arg-prog-2.herokuapp.com/proyectos/nuevo',dato)
   }
 
   /**************METODO DELETE ***************/
   eliminarProyecto(id:any):Observable<any>{
-    return this.http.delete(`${'https://proyectos01.herokuapp.com/delete'}/${id}`)
+    return this.http.delete(`${'https://back-end-arg-prog-2.herokuapp.com/proyectos/delete'}/${id}`)
   }
 
 

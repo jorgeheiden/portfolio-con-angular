@@ -9,11 +9,11 @@
         <ul class="d-flex flex-wrap justify-content-center">
           <li class="mx-5 mt-2 d-flex flex flex-column" *ngFor="let dato of datos">
             
-            <a [href]="dato.link" target="_blank" class="img-size">
-              <img class="img" [src]="dato.imagen" alt="">
+            <a [href]="dato.linkProy" target="_blank" class="img-size">
+              <img class="img" [src]="dato.imagenProy" alt="">
             </a>
-            <p class="text-center texto">{{dato.proyecto}}</p>
-            <button class="btn-eliminar" (click)="eliminar(dato.id)"></button>
+            <p class="text-center texto">{{dato.nombreProy}}</p>
+            <button class="btn-eliminar" (click)="eliminar(dato.idProy)"></button>
           </li>
         </ul>
       </div>

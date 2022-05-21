@@ -24,9 +24,9 @@ export class ProyectosLoggedComponent implements OnInit {
   /********* METODO POST ********/
   imagenes:any
   
-  enviar(imagen:any, proyecto:any, link:any){
+  enviar(imagenProy:any, nombreProy:any, linkProy:any){
 
-    this.storageService.enviarI({imagen, proyecto, link}).subscribe(data =>{
+    this.storageService.enviarI({imagenProy, nombreProy, linkProy}).subscribe(data =>{
       console.log(data)
       this.ngOnInit()
     })

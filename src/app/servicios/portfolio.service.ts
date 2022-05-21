@@ -22,17 +22,17 @@ export class PortfolioService {
 
   /*METODO GET*/
     obtenerDatos(): Observable<any>{
-      return this.http.get<any>('https://api-con-springboot.herokuapp.com/ver/personas')
+      return this.http.get<any>('https://back-end-arg-prog-2.herokuapp.com/educacion/ver/educaciones')
     }
 
     /*METODO POST*/
     agregarTitulo(dato:any): Observable<any>{
-      return this.http.post<any>('https://api-con-springboot.herokuapp.com/new/persona', dato)
+      return this.http.post<any>('https://back-end-arg-prog-2.herokuapp.com/educacion/nuevo', dato)
       
     }
     /*METODO DELETE*/
     eliminarTitulo(id:any):Observable<any>{
-      return this.http.delete(`${'https://api-con-springboot.herokuapp.com/delete'}/${id}`)
+      return this.http.delete(`${'https://back-end-arg-prog-2.herokuapp.com/educacion/delete'}/${id}`)
     }
 
     /*Funcion llamada en PROYECTOS*/

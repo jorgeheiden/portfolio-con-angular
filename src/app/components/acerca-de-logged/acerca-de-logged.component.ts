@@ -32,9 +32,9 @@ export class AcercaDeLoggedComponent implements OnInit {
     })
   }
       /*METODO POST*/
-  agregar(titulo:string, institucion:string){
-      this.datoPorfolio.agregarTitulo({titulo, institucion}).subscribe(data=>{
-        console.log(titulo)
+  agregar(tituloEdu:string, institucionEdu:string){
+      this.datoPorfolio.agregarTitulo({tituloEdu, institucionEdu}).subscribe(data=>{
+        console.log(tituloEdu)
         this.ngOnInit()
       })
   }
