@@ -83,3 +83,35 @@ li{
     font-size: 1.05rem;
     margin-top: 0.4rem;
 }
+.container-link-cv{
+    margin-top: 9vh;
+}
+.link-cv{
+    color: black;
+    border: 1px solid black;
+    border-radius: 10%;
+    padding: 0.7rem 1.5rem 0.7rem 1.5rem;
+    text-decoration: none;
+    background-color: red;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 0 0 10px;
+}
+.container-link-cv:active{
+    transform: scale(0.9);
+}
+.link-cv:hover{
+    background-color: #0eae57;
+}
+@media only screen and (max-width: 564px){
+    .introduccion{
+        font-family: 'Space Mono', monospace;
+        font-weight: 700;
+        font-size: 4vh;
+        color: rgb(14, 14, 116);
+        margin-left: 0.1rem!important;
+        margin-right: 0.1rem!important;
+        text-align: center;
+    }
+}
