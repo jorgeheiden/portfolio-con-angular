@@ -13,9 +13,12 @@
               <img class="img" [src]="dato.imagenProy" alt="">
             </a>
             <p class="text-center texto">{{dato.nombreProy}}</p>
-            <button class="btn-eliminar" (click)="eliminar(dato.idProy)"></button>
+            <div class="d-flex">
+              <button class="btn-eliminar me-2" (click)="eliminar(dato.idProy)"></button>
+              <button type="button" (click)="obtenerIdProyecto(dato.idProy)" class="btn-actualizar ms-2" data-bs-toggle="modal" data-bs-target="#modalActualizarProyectos">x</button>
+            </div>
+
           
-            <button type="button" (click)="obtenerIdProyecto(dato.idProy)" class="btn-actualizar" data-bs-toggle="modal" data-bs-target="#modalActualizarProyectos">x</button>
           </li>
         </ul>
       </div>

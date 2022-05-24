@@ -46,6 +46,16 @@ export class AcercaDeLoggedComponent implements OnInit {
       this.ngOnInit()
     } )
   }
+    /*METODO PUT */
+    idFormacion:any;
+    obtenerIdFormacion(id:any){
+      this.idFormacion = id
+      console.log(id)
+    }
 
-
+    editarFormacion(idEdu:any, tituloEdu:any, institucionEdu:any){
+      this.datoPorfolio.actualizarFormacion({idEdu, tituloEdu, institucionEdu}).subscribe(data =>{
+        this.ngOnInit()
+      })
+    }
 }

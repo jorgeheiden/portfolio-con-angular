@@ -46,4 +46,9 @@ export class PortfolioService {
       console.log(d)
       return this.http.post<any>('https://proyectos01.herokuapp.com/new/persona', d)
     }
+
+    /*******************METODO PUT **************/
+    actualizarFormacion(dato: any):Observable<any>{
+      return this.http.put<any>('https://back-end-arg-prog-2.herokuapp.com/educacion/update', dato)
+    }
 }

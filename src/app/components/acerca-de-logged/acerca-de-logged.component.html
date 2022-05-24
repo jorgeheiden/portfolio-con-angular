@@ -23,17 +23,30 @@
           </div>
   
       </div>
+      <!--
         <h2 class="formacion-margen">Como Desarrolador:</h2>
         <ul class="">
           <li class="margen-li1 d-flex align-content-center" *ngFor="let titulo of titulos"># {{titulo.tituloEdu}}, {{titulo.institucionEdu}}
-            <div>
+            <div class="">
               <button class="boton-eliminar ms-4" (click)="eliminar(titulo.idEdu)"></button>
             </div>
   
           </li>
-          
-  
         </ul>
+      -->
+
+      <h2 class="formacion-margen">Como Desarrolador:</h2>
+        <ul class="">
+          
+          <li class="margen-li1 d-flex align-content-center" *ngFor="let titulo of titulos"># {{titulo.tituloEdu}}, {{titulo.institucionEdu}}
+            <div class="flex-grow-1 d-flex justify-content-end">
+              <button class="editar-formacion" type="button" (click)="obtenerIdFormacion(titulo.idEdu)" data-bs-toggle="modal" data-bs-target="#modalEditarFormacion" ></button>
+              <button class="boton-eliminar ms-2" (click)="eliminar(titulo.idEdu)"></button>
+            </div>
+  
+          </li>
+        </ul>
+
             <!--MODAL-->
         <div class="modal fade " id="myModal">
           <div class="modal-dialog modal-fullscreen-sm-down">
@@ -48,14 +61,14 @@
               <!-- Modal body -->
               <div class="modal-body d-flex flex-column">
                 <h5 class="text-dark" >Titulo:</h5>
-                <input class="w-75" type="text" #tituloEdu/>
+                <input class="w-75" type="text" #tituloEditarEdu/>
                 <h5 class="text-dark">Institucion:</h5>
-                <input class="w-75" type="text" #institucionEdu/>
+                <input class="w-75" type="text" #institucionEditarEdu/>
               </div>
         
               <!-- Modal footer -->
               <div class="modal-footer">
-                <button (click)="agregar(tituloEdu.value, institucionEdu.value); tituloEdu.value= ''; institucionEdu.value=''" type="button" class="btn btn-danger" data-bs-dismiss="modal">Agregar</button>
+                <button (click)="agregar(tituloEditarEdu.value, institucionEditarEdu.value); tituloEdu.value= ''; institucionEdu.value=''" type="button" class="btn btn-danger" data-bs-dismiss="modal">Agregar</button>
               </div>
         
             </div>
@@ -83,5 +96,34 @@
         </ul>
       </section>
     </div>
+
+          <!--MODAL EDITAR FORMACION-->
+    <div class="modal fade " id="modalEditarFormacion">
+      <div class="modal-dialog modal-fullscreen-sm-down">
+        <div class="modal-content">
+    
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title text-black">Editar Formacion</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+    
+          <!-- Modal body -->
+          <div class="modal-body d-flex flex-column">
+            <h5 class="text-dark" >Titulo:</h5>
+            <input class="w-75" type="text" #tituloEdu/>
+            <h5 class="text-dark">Institucion:</h5>
+            <input class="w-75" type="text" #institucionEdu/>
+          </div>
+    
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button (click)="editarFormacion(idFormacion, tituloEdu.value, institucionEdu.value); tituloEdu.value= ''; institucionEdu.value=''" type="button" class="btn btn-danger" data-bs-dismiss="modal">Enviar</button>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+
   </div>
   

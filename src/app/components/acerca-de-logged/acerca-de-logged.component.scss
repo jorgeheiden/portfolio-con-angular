@@ -13,7 +13,7 @@
     list-style: none;
 }
 .margen-li1{
-    margin-left: 6vh;
+    margin-left: 2vw;
 }
 
 .formacion h1{
@@ -63,7 +63,7 @@
     }
 }
 .lista-educacion-margen{
-    margin-left: 3vw;
+    margin-left: 2vw;
 }
 .btn-formacion{
     background-image: url(../../../assets/iconos-proyecto/upload-3d.svg);
@@ -114,4 +114,15 @@ li{
         margin-right: 0.1rem!important;
         text-align: center;
     }
+}
+.editar-formacion{
+    background-image: url('../../../assets/icono-editar/lapiz.png');
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1.7rem;
+    width: 1.7rem;
+    border: none;
+    box-shadow: 0 0 5px;
 }
