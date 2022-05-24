@@ -7,7 +7,7 @@
 
     <div class="col-sm-12 d-flex justify-content-center align-content-center">
       <ul class="d-flex flex-wrap justify-content-center">
-        <li class="mx-5 mt-2 d-flex flex flex-column" *ngFor="let dato of datos">
+        <li class="mx-5 mt-2 d-flex flex flex-column" *ngFor="let dato of datos | orderBy: 'idProy'">
           
           <a [href]="dato.linkProy" target="_blank" class="img-size">
             <img class="img" [src]="dato.imagenProy" alt="">
