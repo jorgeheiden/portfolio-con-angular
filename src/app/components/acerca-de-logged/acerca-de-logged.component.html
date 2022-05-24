@@ -38,7 +38,7 @@
       <h2 class="formacion-margen">Como Desarrolador:</h2>
         <ul class="">
           
-          <li class="margen-li1 d-flex align-content-center" *ngFor="let titulo of titulos"># {{titulo.tituloEdu}}, {{titulo.institucionEdu}}
+          <li class="margen-li1 d-flex align-content-center" *ngFor="let titulo of titulos | orderBy: 'idEdu' "># {{titulo.tituloEdu}}, {{titulo.institucionEdu}}
             <div class="flex-grow-1 d-flex justify-content-end">
               <button class="editar-formacion" type="button" (click)="obtenerIdFormacion(titulo.idEdu)" data-bs-toggle="modal" data-bs-target="#modalEditarFormacion" ></button>
               <button class="boton-eliminar ms-2" (click)="eliminar(titulo.idEdu)"></button>
