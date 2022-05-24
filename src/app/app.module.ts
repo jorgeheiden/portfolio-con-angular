@@ -24,6 +24,8 @@ import { PortfolioLoggedComponent } from './components/portfolio-logged/portfoli
 import { AcercaDeLoggedComponent } from './components/acerca-de-logged/acerca-de-logged.component';
 import { ProyectosLoggedComponent } from './components/proyectos-logged/proyectos-logged.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
+import { OrderModule } from 'ngx-order-pipe';
+
 
 @NgModule({
   declarations: [
@@ -41,6 +43,7 @@ import { ContactoComponent } from './components/contacto/contacto.component';
     ContactoComponent
   ],
   imports: [
+    OrderModule,
     BrowserModule,
     AppRoutingModule,
     /*2) Especificar el modulo importado: */

@@ -7,13 +7,15 @@
   
       <div class="col-sm-12 d-flex justify-content-center align-content-center">
         <ul class="d-flex flex-wrap justify-content-center">
-          <li class="mx-5 mt-2 d-flex flex flex-column" *ngFor="let dato of datos">
+          <li class="mx-5 mt-2 d-flex flex flex-column" *ngFor="let dato of datos | orderBy: 'idProy' ">
             
             <a [href]="dato.linkProy" target="_blank" class="img-size">
               <img class="img" [src]="dato.imagenProy" alt="">
             </a>
             <p class="text-center texto">{{dato.nombreProy}}</p>
             <button class="btn-eliminar" (click)="eliminar(dato.idProy)"></button>
+          
+            <button type="button" (click)="obtenerIdProyecto(dato.idProy)" class="btn-actualizar" data-bs-toggle="modal" data-bs-target="#modalActualizarProyectos">x</button>
           </li>
         </ul>
       </div>
@@ -93,5 +95,36 @@
     </div>
   </div>
   
+  
+  <!-- MODAL UPDATE -->
+  <div class="modal modal fade" id="modalActualizarProyectos">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Editar Proyecto</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <h5>Agregar una Imagen:</h5>
+          <input class="mb-3" type="file" accept="png, jpg, jpeg" (change)="cargarImagen($event)">
+          <h5>Nombre del Proyecto:</h5>
+          <input class="mb-3 w-50" type="text" #nombreEditarProyecto/>
+          <h5>Link del Proyecto</h5>
+          <input class="mb-3 w-50" type="text" #linkEditarProyecto>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="sub" class="btn btn-danger" (click)="actualizar(idProyecto, imagenes, nombreEditarProyecto.value, linkEditarProyecto.value); nombreProyecto.value= ''; linkProyecto.value='' " data-bs-dismiss="modal">Enviar</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+
   </div>
   

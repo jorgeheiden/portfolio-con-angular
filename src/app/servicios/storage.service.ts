@@ -23,6 +23,11 @@ export class StorageService {
       return this.http.post<any>('https://back-end-arg-prog-2.herokuapp.com/proyectos/nuevo',dato)
   }
 
+  /*********METODO PUT ************/
+  actualizarProyecto(dato:any):Observable<any>{
+    return this.http.put<any>('https://back-end-arg-prog-2.herokuapp.com/proyectos/update',dato)
+  }
+
   /**************METODO DELETE ***************/
   eliminarProyecto(id:any):Observable<any>{
     return this.http.delete(`${'https://back-end-arg-prog-2.herokuapp.com/proyectos/delete'}/${id}`)

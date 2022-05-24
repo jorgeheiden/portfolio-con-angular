@@ -33,6 +33,20 @@ export class ProyectosLoggedComponent implements OnInit {
 
     
   }
+
+  /*************METODO PUT *******************/
+  idProyecto:any
+  obtenerIdProyecto(id:any){
+    console.log("Este es el id: " + id)
+    this.idProyecto = id
+  }
+  actualizar(idProy:any, imagenProy:any, nombreProy:any, linkProy:any){
+    this.storageService.actualizarProyecto({idProy, imagenProy, nombreProy, linkProy}).subscribe(data =>{
+      console.log(data)
+      this.ngOnInit()
+    })
+  }
+
   /*************METODO DELETE ***************/
   eliminar(proyecto_id:any){
     this.storageService.eliminarProyecto(proyecto_id).subscribe((resultado:any) =>{

@@ -49,6 +49,18 @@ li{
 .btn-eliminar:active{
  transform: scale(0.9);
 }
+
+.btn-actualizar{
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 2.2rem;
+    width: 2.2rem;
+    border: none;
+    box-shadow: 0 0 10px;
+}
+
 .btn-upload{
     margin-left: 20%;
     background-image: url(../../../assets/iconos-proyecto/upload-3d.svg);
