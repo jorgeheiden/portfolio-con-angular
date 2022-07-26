@@ -25,6 +25,7 @@ import { AcercaDeLoggedComponent } from './components/acerca-de-logged/acerca-de
 import { ProyectosLoggedComponent } from './components/proyectos-logged/proyectos-logged.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { OrderModule } from 'ngx-order-pipe';
+import { SkillsLoggedComponent } from './components/skills-logged/skills-logged.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { OrderModule } from 'ngx-order-pipe';
     PortfolioLoggedComponent,
     AcercaDeLoggedComponent,
     ProyectosLoggedComponent,
-    ContactoComponent
+    ContactoComponent,
+    SkillsLoggedComponent
   ],
   imports: [
     OrderModule,

@@ -1,0 +1,83 @@
+.list-item-skils{
+    list-style-type: none;
+    font-family: 'Space Mono', monospace;
+    
+}
+.fondo{
+    background: white;
+}
+.imagen-skils{
+    border-radius: 20%;
+    margin-top: 100px;
+}
+.fuente{
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 10vh;
+    text-decoration: underline;
+    color: rgb(14, 14, 116);
+}
+.icono-skills{
+    height: 15vh;
+}
+.background{
+    background-color: #0eae57;
+    background-image: linear-gradient(180deg, #0eae57 0%, #0c7475 100%);
+    color: white;
+}
+.fondo-texto{
+    background-color: #060f61;
+    border-radius: 8%;
+    padding: 0 0.5rem 0 0.5rem;
+}
+.columna-skils{
+    background-color: #F2F3F4;
+}
+.btn-upload{
+    margin-left: 20%;
+    background-image: url(../../../assets/iconos-proyecto/upload-3d.svg);
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    height: 3rem;
+    width: 3rem;
+    box-shadow: 0 0 10px ;
+    margin-top: 1.6%;
+}
+.img{
+    height: 15vh;
+    
+}
+.btn-eliminar{
+    background-image: url(../../../assets/iconos-proyecto/eliminar.svg);
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1.5rem;
+    width: 1.5rem;
+    border: none;
+    box-shadow: 0 0 10px;
+}
+.btn-eliminar:active{
+ transform: scale(0.9);
+}
+.btn-actualizar{
+    background-image: url('../../../assets/icono-editar/lapiz.png');
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1.5rem;
+    width: 1.5rem;
+    border: none;
+    box-shadow: 0 0 5px;
+}
+.btn-actualizar:active{
+    transform: scale(0.9);
+}
+li{
+    list-style-type: none;
+}
