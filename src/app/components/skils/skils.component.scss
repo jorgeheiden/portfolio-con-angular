@@ -33,3 +33,52 @@
 .columna-skils{
     background-color: #F2F3F4;
 }
+.btn-upload{
+    margin-left: 20%;
+    background-image: url(../../../assets/iconos-proyecto/upload-3d.svg);
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    height: 3rem;
+    width: 3rem;
+    box-shadow: 0 0 10px ;
+    margin-top: 1.6%;
+}
+.img{
+    height: 14vh;
+    
+}
+.btn-eliminar{
+    background-image: url(../../../assets/iconos-proyecto/eliminar.svg);
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1.5rem;
+    width: 1.5rem;
+    border: none;
+    box-shadow: 0 0 10px;
+    margin-right: 0.5rem;
+}
+.btn-eliminar:active{
+ transform: scale(0.9);
+}
+.btn-actualizar{
+    background-image: url('../../../assets/icono-editar/lapiz.png');
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1.5rem;
+    width: 1.5rem;
+    border: none;
+    box-shadow: 0 0 5px;
+}
+.btn-actualizar:active{
+    transform: scale(0.9);
+}
+li{
+    list-style-type: none;
+}

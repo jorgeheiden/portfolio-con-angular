@@ -10,65 +10,16 @@
                 <button  type="button" class="btn-upload " data-bs-toggle="modal" data-bs-target="#modalProyectos"></button>
             </div>
             <ul class="d-flex flex-wrap justify-content-center" >
-                <li class="list-item-skils me-5 mb-5 text-center" *ngFor="let dato of datos | orderBy: 'idProy' " >
+                <li class="list-item-skils me-5 mb-3 text-center" *ngFor="let dato of datos | orderBy: 'idProy' " >
                     <img class="img" [src]="dato.imagenHab" alt="">
                     <p class="fondo-texto mt-1" >{{dato.nombreHab}}</p>
                     <div class="d-flex">
-                        <button class="btn-eliminar" ></button>
-                        <button class="btn-actualizar" ></button>
+                        <button class="btn-eliminar" (click)="eliminar(dato.idHab)" ></button>
+                        <button class="btn-actualizar" (click)="obtenerIdHabilidad(dato.idHab)" data-bs-toggle="modal" data-bs-target="#modalActualizarHabilidad" ></button>
                     </div>
                 </li>
             </ul>
         </div>
-
-
-        <!--
-        <div class="col-sm background ">
-            <div class="d-flex justify-content-end">
-                <button  type="button" class="btn-upload " data-bs-toggle="modal" data-bs-target="#modalProyectos"></button>
-            </div>
-           <ul class="d-flex flex-wrap justify-content-center">
-                <li class="list-item-skils me-5 mb-5 text-center">
-                    <img class="icono-skills" src="../../../assets/skils/html.svg" alt="Html">
-                    <p class="fondo-texto mt-1">Htmlz</p>
-                </li>
-                <li class="list-item-skils me-5 text-center">
-                    <img class="icono-skills" src="../../../assets/skils/javascript.svg" alt="JavaScript">
-                    <p class="fondo-texto mt-1">JavaScript</p>
-                </li>
-                <li class="list-item-skils me-5 text-center">
-                    <img class="icono-skills" src="../../../assets/skils/css.svg" alt="Css">
-                    <p class="fondo-texto mt-1">CSS</p>
-                </li>
-                <li class="list-item-skils me-5 text-center">
-                    <img class="icono-skills" src="../../../assets/skils/git.svg" alt="Git">
-                    <p class="fondo-texto mt-1">Git</p>
-                </li>
-                <li class="list-item-skils me-5 mb-5 text-center">
-                    <img class="icono-skills" src="../../../assets/skils/angular.svg" alt="Angular">
-                    <p class="fondo-texto">Angular</p>
-                </li>
-                <li class="list-item-skils me-5 text-center">
-                    <img class="icono-skills" src="../../../assets/skils/typescript.svg" alt="TypeScript">
-                    <p class="fondo-texto">TypeScript</p>
-                </li>
-                <li class="list-item-skils me-5 text-center">
-                    <img class="icono-skills" src="../../../assets/skils/sql.svg" alt="Sql">
-                    <p class="fondo-texto">Sql</p>
-                </li>
-                <li class="list-item-skils me-5 text-center">
-                    <img class="icono-skills" src="../../../assets/skils/java.svg" alt="Java">
-                    <p class="fondo-texto">Java</p>
-                </li>
-                <li class="list-item-skils me-5 text-center">
-                    <img class="icono-skills" src="../../../assets/skils/springboot.svg" alt="SpringBoot">
-                    <p class="fondo-texto">SpringBoot</p>
-                </li>
-        
-            </ul>
-        </div>
-    </div>
--->
 
                           <!--***************MODAL*******************-->
   
@@ -80,7 +31,7 @@
   
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">Subir un Proyecto</h4>
+          <h4 class="modal-title">Agregar Skill</h4>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
   
@@ -96,6 +47,34 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-danger"  data-bs-dismiss="modal"
           (click)="enviar(imagenes, nombreHabilidad.value); nombreHabilidad.value= '' ">Enviar</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL UPDATE -->
+  <div class="modal modal fade" id="modalActualizarHabilidad">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Editar Skill</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <h5>Agregar una Imagen:</h5>
+          <input class="mb-3" type="file" accept="png, jpg, jpeg" (change)="cargarImagen($event)">
+          <h5>Nombre de la Habilidad:</h5>
+          <input class="mb-3 ms-1 w-75" type="text" #nombreEditarHabilidad/>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="sub" class="btn btn-danger" (click)="actualizar(idHabilidad, imagenes, nombreEditarHabilidad.value); nombreEditarHabilidad.value= '' " data-bs-dismiss="modal">Enviar</button>
         </div>
   
       </div>

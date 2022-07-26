@@ -30,6 +30,27 @@ export class SkillsLoggedComponent implements OnInit {
     
   }
 
+  /*************METODO DELETE ***************/
+  eliminar(habilidad_id:any){
+    this.habilidadesService.eliminarHabilidad(habilidad_id).subscribe((resultado:any) =>{
+
+      this.ngOnInit()
+    })
+  }
+
+  /*************METODO PUT *******************/
+  idHabilidad:any
+  obtenerIdHabilidad(id:any){
+    console.log("Este es el id: " + id)
+    this.idHabilidad = id
+  }
+  actualizar(idHab:any, imagenHab:any, nombreHab:any){
+    this.habilidadesService.actualizarHabilidad({idHab, imagenHab, nombreHab}).subscribe(data =>{
+      console.log(data)
+      this.ngOnInit()
+    })
+  }
+
     /****************Codigo para subir imagenes a Firebase ****************/
   // event: accede al evento
   //event.target: accede al input
