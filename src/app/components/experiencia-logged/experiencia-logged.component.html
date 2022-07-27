@@ -1,1 +1,89 @@
-<p>experiencia-logged works!</p>
+<div class="container-fluid background vh-100">
+    <div class="col-sm d-flex justify-content-center align-content-center flex-wrap mb-5">
+        <h1 class="titulo text-center mt-3">Experiencia Laboral</h1>
+        <button type="button" class="btn-upload" data-bs-toggle="modal" data-bs-target="#modalTrabajo"></button>
+
+    </div>
+    <div>
+        <ul class="d-flex flex-column ps-0">
+            <li class="d-flex flex-row flex-wrap mb-4 justify-content-center pe-5" *ngFor="let dato of datos | orderBy: 'idTrab' ">
+                <div class="">
+                    <img [src]="dato.imagenTrab" alt="imagen" class="img me-5">
+                </div>
+                <div class="experiencia ms-5 me-5 w-25">
+                    <h1 class="nombre">{{dato.nombreTrab}}</h1>
+                    <p class="descripcion" >{{dato.descripcionTrab}}</p>
+                </div>
+                <div class="d-flex align-items-center">
+                    <button class="btn-eliminar me-2" (click)="eliminar(dato.idTrab)" ></button>
+                    <button type="button" class="btn-actualizar ms-2" data-bs-toggle="modal"
+                        data-bs-target="#modalActualizarTrabajo" (click)="obtenerIdTrabajo(dato.idTrab)">x</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+     <!--***************MODAL*******************-->
+  
+  
+  <!-- The Modal -->
+  <div class="modal modal fade" id="modalTrabajo">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Experiencia Laboral</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <h5>Agregar una Imagen:</h5>
+          <input class="mb-3" type="file" accept="png, jpg, jpeg" (change)="cargarImagen($event)">
+          <h5>Nombre:</h5>
+          <input class="mb-3 w-75 ms-1" type="text" #nombreTrabajo/>
+          <h5>Descripcion:</h5>
+          <textarea class="mb-3 w-75 ms-1" name="" id="" cols="30" rows="5" #descripcionTrabajo></textarea>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger"  data-bs-dismiss="modal" (click)="enviar(imagenes, nombreTrabajo.value, descripcionTrabajo.value); nombreTrabajo.value= ''; descripcionTrabajo.value ='' ">Enviar</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+
+    <!-- MODAL UPDATE -->
+    <div class="modal modal fade" id="modalActualizarTrabajo">
+      <div class="modal-dialog">
+        <div class="modal-content">
+    
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Editar Skill</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+    
+          <!-- Modal body -->
+          <div class="modal-body">
+            <h5>Agregar una Imagen:</h5>
+            <input class="mb-3" type="file" accept="png, jpg, jpeg" (change)="cargarImagen($event)">
+            <h5>Nombre:</h5>
+            <input class="mb-3 ms-1 w-75" type="text" #nombreEditarTrabajo/>
+            <h5>Descripcion:</h5>
+            <textarea class="mb-3 w-75 ms-1" name="" id="" cols="30" rows="5" #descripcionEditarTrabajo></textarea>
+        
+          </div>
+    
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="sub" class="btn btn-danger" (click)="actualizar(idHabilidad, imagenes, nombreEditarTrabajo.value, descripcionEditarTrabajo.value); nombreEditarTrabajo.value= ''; descripcionEditarTrabajo.value='' " data-bs-dismiss="modal">Enviar</button>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+</div>
