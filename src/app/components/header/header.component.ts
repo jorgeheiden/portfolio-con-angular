@@ -42,6 +42,9 @@ export class HeaderComponent implements OnInit {
   proyectos(){
     this.router.navigate(['proyectos-logged'])
   }
+  experiencia(){
+    this.router.navigate(['experiencia'])
+  }
 
   /***********************Contacto ****************/
   contacto(){

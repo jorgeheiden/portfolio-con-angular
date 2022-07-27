@@ -11,6 +11,8 @@ import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { SkilsComponent } from './components/skils/skils.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { SkillsLoggedComponent } from './components/skills-logged/skills-logged.component';
+import { ExperienciaComponent } from './components/experiencia/experiencia.component';
+import { ExperienciaLoggedComponent } from './components/experiencia-logged/experiencia-logged.component';
 
 
 const routes: Routes = [
@@ -24,6 +26,8 @@ const routes: Routes = [
   {path: 'skills-logged', component: SkillsLoggedComponent, ...canActivate(() => redirectUnauthorizedTo(['skills']))},
   {path: 'proyectos', component: ProyectosComponent},
   {path: 'proyectos-logged', component: ProyectosLoggedComponent, ...canActivate(() => redirectUnauthorizedTo(['proyectos']) ) },
+  {path: 'experiencia', component: ExperienciaComponent},
+  {path: 'experiencia-logged', component: ExperienciaLoggedComponent, ...canActivate(() => redirectUnauthorizedTo(['experiencia']))},
   {path: 'contacto', component: ContactoComponent}
 ];
 
