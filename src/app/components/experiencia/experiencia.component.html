@@ -1,8 +1,6 @@
-<div class="container-fluid background vh-100">
+<div class="container-fluid background altura">
     <div class="col-sm d-flex justify-content-center align-content-center flex-wrap mb-5">
         <h1 class="titulo text-center mt-3">Experiencia Laboral</h1>
-        <button type="button" class="btn-upload" data-bs-toggle="modal" data-bs-target="#modalTrabajo"></button>
-
     </div>
     <div>
         <ul class="d-flex flex-column ps-0">
@@ -10,7 +8,7 @@
                 <div class="">
                     <img [src]="dato.imagenTrab" alt="imagen" class="img me-5">
                 </div>
-                <div class="experiencia ms-5 me-5 w-25">
+                <div class="ms-5 me-5 w-25 experiencia">
                     <h1 class="nombre">{{dato.nombreTrab}}</h1>
                     <p class="descripcion" >{{dato.descripcionTrab}}</p>
                 </div>

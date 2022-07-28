@@ -21,7 +21,7 @@ li{
     text-decoration: underline;
     font-family: 'Space Mono', monospace;
     font-weight: 700;
-    margin-left: 23%;
+    margin-left: 40%;
     
 }
 .texto{
@@ -80,4 +80,21 @@ li{
 }
 .btn-upload:active{
     transform: scale(0.9)
+}
+.altura{
+    min-height: 100vh; 
+    height: 100%; 
+    display: table;
+}
+@media only screen and (max-width: 564px){
+    .titulo{
+        margin-left: 15%;
+    }
+    .marg{
+        margin-left: 0!important;
+    }
+    ul{
+        margin-left: 0!important;
+        padding: 0!important;
+    }
 }

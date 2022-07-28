@@ -63,7 +63,7 @@ li{
     text-decoration: underline;
     font-family: 'Space Mono', monospace;
     font-weight: 700;
-    margin-left: 23%;
+    margin-left: 0;
     
 }
 .nombre{
@@ -73,5 +73,55 @@ li{
 .descripcion{
     font-family: 'Space Mono', monospace;
     font-weight: 600;
+
+}
+.altura{
+    min-height: 100vh; 
+    height: 100%; 
+    display: table;
+}
+
+@media only screen and (max-width: 564px){
+    .experiencia{
+        width: 100%!important;
+        margin: 0 0 0 1rem!important;
+    }
+    .nombre{
+        width: 95%;
+        margin-top: 0.5rem;
+    }
+    .descripcion{
+        width: 95%;
+    }
+    li{
+        margin-left: 1rem;
+    }
+    .titulo{
+        margin-left: 0.5rem;
+    }
+
+}
+@media only screen and (max-width: 564px){
+    .experiencia{
+        width: 100%!important;
+        margin: 0 0 0 1rem!important;
+    }
+    .nombre{
+        width: 95%;
+        margin-top: 0.5rem;
+    }
+    .descripcion{
+        width: 95%;
+    }
+    li{
+        margin-left: 1rem;
+    }
+    .titulo{
+        margin-left: 0;
+        margin-right: 0.5rem;
+    }
+    img{
+        margin-left: 0.5rem;
+    }
 
 }

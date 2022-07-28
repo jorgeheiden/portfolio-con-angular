@@ -1,12 +1,12 @@
 <div id="proyectos" class="container-fluid background-proyectos">
-    <div class="row vh-100">
-      <div class="col-sm d-flex justify-content-center align-content-center flex-wrap">
-        <h1 class="titulo text-center mt-3">Proyectos</h1>
+    <div class="row altura">
+      <div class="col-sm d-flex justify-content-center align-content-center flex-wrap mb-5">
+        <h1 class="titulo text-center mt-3 ">Proyectos</h1>
         <button type="button" class="btn-upload" data-bs-toggle="modal" data-bs-target="#modalProyectos"></button>
       </div>
   
-      <div class="col-sm-12 d-flex justify-content-center align-content-center">
-        <ul class="d-flex flex-wrap justify-content-center">
+      <div class="col-sm-12 d-flex justify-content-center align-content-center ms-5 marg">
+        <ul class="d-flex flex-wrap justify-content-center ms-5">
           <li class="mx-5 mt-2 d-flex flex flex-column" *ngFor="let dato of datos | orderBy: 'idProy' ">
             
             <a [href]="dato.linkProy" target="_blank" class="img-size">
